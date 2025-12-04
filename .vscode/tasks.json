@@ -1,0 +1,30 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "qmake: configure",
+      "type": "shell",
+      "command": "qmake",
+      "args": [
+        "${workspaceFolder}/framework_3.pro"
+      ],
+      "group": "build",
+      "problemMatcher": []
+    },
+    {
+      "label": "build: make",
+      "type": "shell",
+      "command": "make",
+      "args": ["-j", "${env:MAKEFLAGS:-$(nproc)}"],
+      "group": "build",
+      "problemMatcher": ["$gcc"],
+      "dependsOn": ["qmake: configure"]
+    },
+    {
+      "label": "clean",
+      "type": "shell",
+      "command": "make clean",
+      "group": "build"
+    }
+  ]
+}

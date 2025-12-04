@@ -1,0 +1,25 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Launch blaser_app (GDB)",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/blaser_app",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "envFile": "${workspaceFolder}/.vscode/.env",
+      "environment" : [
+        { "name": "LD_LIBRARY_PATH", "value": "${env:LD_LIBRARY_PATH}:${workspaceFolder}/lib:/opt/Qt/6.5.0/gcc_64/lib" },
+        { "name": "QT_PLUGIN_PATH", "value": "/opt/Qt/6.5.0/gcc_64/plugins" },
+        { "name": "PYLON_ROOT", "value": "${env:PYLON_ROOT:-/opt/pylon}" },
+        { "name": "OPENCV_DIR", "value": "${env:OPENCV_DIR:-/usr/include/opencv4}" }
+      ],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "miDebuggerPath": "/usr/bin/gdb",
+      "preLaunchTask": "build: make"
+    }
+  ]
+}
