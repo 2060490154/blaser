@@ -1,0 +1,59 @@
+# Build artifacts
+*.o
+*.obj
+*.so
+*.a
+*.lib
+*.dll
+*.exe
+blaser_app
+
+# Qt / qmake / build
+*.pro.user
+*.pro.user.*
+*.qmake.stash
+Makefile*
+build-*/
+build/
+release/
+debug/
+
+# moc / ui generated files (optional; keep if your build system generates them)
+moc_*.cpp
+moc_*.o
+ui_*.h
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*~
+.DS_Store
+
+# Logs / runtime
+*.log
+
+# Large binary/test assets (move to Git LFS or external storage)
+*.bmp
+*.png
+*.jpg
+*.jpeg
+*.tiff
+
+# CMake / caches
+CMakeFiles/
+CMakeCache.txt
+
+# Python virtualenvs if any
+venv/
+__pycache__/
+
+# System/OS
+Thumbs.db
+desktop.ini
+
+# Secrets / env files
+.env
+*.key
+*.pem
+*.crt
